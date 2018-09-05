@@ -11,7 +11,7 @@ Most of the time they annoy us, but on rare occasions just the right quote appea
 To find the answer we went to Reddit and collected some 490,000 quotes spanning the last 10 years.
 If we look at the distribution of karma(Reddit's popularity score) for these quotes, we see that not all quotes are created equal. 
 
-![](/assets/quote_karma.jpg)
+![](/assets/quote_karma.JPG)
 
 Most quotes end up having almost 0 karma. Where as a few fortunate (19.72%) of posts account for 82.35% of the karma. With the top 5% accounting for 46% of the karma. Almost textbook Pareto distribution. So far nothing new. What makes these quotes so special? 
 To answer this question we're going to use machine learning and NLP(Natural Language Processing) to analyze the text of each quote to try and find some patterns. 
@@ -29,11 +29,11 @@ And here's what we'll look into
 
 Does the age of the post affect its score? If the post is old then shouldn't it have a higher score because more people had the chance to see it? But we know that viral videos can spring out of nowhere gaining astronomical amounts of popularity in a few short days. So are our lucky quotes viral? Or do they gain their popularity with age?
 
-![](/assets/quote_age.jpg)
+![](/assets/quote_age.JPG)
 
 As we can see most of the top 5% of quotes (thats the high scoring quotes) are relatively new (925 days old) compared to the bottom 95% (1033 days old). With a difference of more than 100 days we can say that age doesn't really help you improve your score. But with an average age of over 2 years it doesn't seem like these quotes can be called viral either. Maybe its not how long ago you posted your quote but when you posted? If we look at the number of posts each day for the 2 categories we see something very interesting.
 
-![](/assets/daily_quotes.jpg)
+![](/assets/daily_quotes.JPG)
 
 The low performing quotes have a relatively stable pattern (the activity is higher during working days and lower during weekends).
 Where as the activity chart for the high performers shows that they were release at the end and middle of the week. Posting at the end or middle of the week gives you a slight advantage increasing your score with around 5%.
@@ -111,7 +111,7 @@ If we look at the karma distribution in the top 5% of quotes we see something ve
 
 Word count: Should you keep your quotes short or should they be haiku styled essays expressing the depth of your soul. 
 
-![](/assets/quote_len.jpg)
+![](/assets/quote_len.JPG)
 
 According to the data most of the high scoring quotes are also longer by 4.2 words on average. So longer quotes = higher scores?
 Not quite. We need to know if the karma scores increase as you add more words and to do that we trained a small machine learning model. According to our model each word you add to your quote will increase your karma by just 0.45 points. So 10 words = 4.5 points right? Well yes in theory, but remember longer quotes impact readability. Which we'll explore next. 

@@ -119,7 +119,7 @@ Not quite. We need to know if the karma scores increase as you add more words an
 
 <h2>Readability</h2>
 
-What is readability? I hear you ask. Well simply put readability tells us how easy it is for the reader to understand the contents of the text. To keep things simple we'll use the [Dale-Chall readability score]("https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula"). Whats good about this formula is that it gives us a score corresponding to a US school grade. For example a score of 4 means that an average 4th grader can understand the text.
+What is readability? I hear you ask. Well simply put readability tells us how easy it is for the reader to understand the contents of the text. To keep things simple we'll use the [Dale-Chall readability score](https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula). Whats good about this formula is that it gives us a score corresponding to a US school grade. For example a score of 4 means that an average 4th grader can understand the text.
 
 ![](/assets/quote_readability.JPG)
 

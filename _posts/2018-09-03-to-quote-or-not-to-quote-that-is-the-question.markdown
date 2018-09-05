@@ -11,7 +11,7 @@ Most of the time they annoy us, but on rare occasions just the right quote appea
 To find the answer we went to Reddit and collected some 490,000 quotes spanning the last 10 years.
 If we look at the distribution of karma(Reddit's popularity score) for these quotes, we see that not all quotes are created equal. 
 
-![]("/assets/quote_karma.jpg")
+![](/assets/quote_karma.jpg)
 
 Most quotes end up having almost 0 karma. Where as a few fortunate (19.72%) of posts account for 82.35% of the karma. With the top 5% accounting for 46% of the karma. Almost textbook Pareto distribution. So far nothing new. What makes these quotes so special? 
 To answer this question we're going to use machine learning and NLP(Natural Language Processing) to analyze the text of each quote to try and find some patterns. 
@@ -29,11 +29,11 @@ And here's what we'll look into
 
 Does the age of the post affect its score? If the post is old then shouldn't it have a higher score because more people had the chance to see it? But we know that viral videos can spring out of nowhere gaining astronomical amounts of popularity in a few short days. So are our lucky quotes viral? Or do they gain their popularity with age?
 
-![]("/assets/quote_age.jpg")
+![](/assets/quote_age.jpg)
 
 As we can see most of the top 5% of quotes (thats the high scoring quotes) are relatively new (925 days old) compared to the bottom 95% (1033 days old). With a difference of more than 100 days we can say that age doesn't really help you improve your score. But with an average age of over 2 years it doesn't seem like these quotes can be called viral either. Maybe its not how long ago you posted your quote but when you posted? If we look at the number of posts each day for the 2 categories we see something very interesting.
 
-![]("/assets/daily_quotes.jpg")
+![](/assets/daily_quotes.jpg)
 
 The low performing quotes have a relatively stable pattern (the activity is higher during working days and lower during weekends).
 Where as the activity chart for the high performers shows that they were release at the end and middle of the week. Posting at the end or middle of the week gives you a slight advantage increasing your score with around 5%.
@@ -103,7 +103,7 @@ Common sense would suggest that the if a smart person says something then it mus
 
 The table above shows the 10 quotes with the highest score. As we can see almost all of them have their author specified but does that hold true for all good quotes?
 
-![]("/assets/top5_quotes_karma.png")
+![](/assets/top5_quotes_karma.png)
 
 If we look at the karma distribution in the top 5% of quotes we see something very interesting. 38% of the karma is collected by unknown authors (quotes that don't specify the name of the author). 
 
@@ -111,7 +111,7 @@ If we look at the karma distribution in the top 5% of quotes we see something ve
 
 Word count: Should you keep your quotes short or should they be haiku styled essays expressing the depth of your soul. 
 
-![]("/assets/quote_len.jpg")
+![](/assets/quote_len.jpg)
 
 According to the data most of the high scoring quotes are also longer by 4.2 words on average. So longer quotes = higher scores?
 Not quite. We need to know if the karma scores increase as you add more words and to do that we trained a small machine learning model. According to our model each word you add to your quote will increase your karma by just 0.45 points. So 10 words = 4.5 points right? Well yes in theory, but remember longer quotes impact readability. Which we'll explore next. 
@@ -121,7 +121,7 @@ Not quite. We need to know if the karma scores increase as you add more words an
 
 What is readability? I hear you ask. Well simply put readability tells us how easy it is for the reader to understand the contents of the text. To keep things simple we'll use the [Dale-Chall readability score]("https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula"). Whats good about this formula is that it gives us a score corresponding to a US school grade. For example a score of 4 means that an average 4th grader can understand the text.
 
-![]("/assets/quote_readability.JPG")
+![](/assets/quote_readability.JPG)
 
 Looking at the 2 graphs reveals that the top quotes have a slightly lower readability score (6.87 versus 7.04 for the bottom 95 %) making them easier to understand. This is also confirmed by our model which predicts that an increase of 1 level would result in a loss of 0.5 points of karma. Passionate writers be warned! Increasing the length of your quote might backfire on you if the text becomes too hard to understand.
 
@@ -129,7 +129,7 @@ Looking at the 2 graphs reveals that the top quotes have a slightly lower readab
 
 Should your quotes be filled with hope? Or dark and gloomy? That's what our sentiment analysis will determine. But how does sentiment work? Well to put it simple we split all words in 2 categories - positive and negative. Positive words are those associated with ... well positive feelings such as joy, kindness, inspiration and so on. Negative are all words associated with bad emotions - anger, sadness and loneliness. Then we give each quote a score between -1 and 1, where -1 means the quote is highly negative, 1 that its positive and 0 means neutral. So which feelings are most common in our data? Well lets take a look!
 
-![]("assets/quote_sentiment.JPG")
+![](/assets/quote_sentiment.JPG)
 
 What does the graph say? Well the data seems to suggest that positive quotes are getting higher scores. So my quote should be inspirational right? As usual that's not the whole picture. If we take a look at the summary that pandas provides we see a completely different picture
 
@@ -164,11 +164,11 @@ As we can see the reality is that our top 5% is slightly more negative than the 
 
 And finally topics! What should you talk about in your quotes? Well lets take a look at the most common terms found in the top quotes.
 
-![]("/assets/quotes_most_common_top5_terms.JPG")
+![](/assets/quotes_most_common_top5_terms.JPG)
 
 We've managed to organize these words into 5 topics 
 
-![]("/assets/quote-topics.png")
+![](/assets/quote-topics.png)
 
 Taking a closer look at the topics we can see that they're mostly relevant to teenagers. This is also supported by our findings in the readability tests. Where the scores seemed to suggest that a text suitable for 14-15 year olds would maximize your score.
 

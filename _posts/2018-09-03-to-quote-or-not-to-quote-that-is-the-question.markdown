@@ -3,7 +3,7 @@ layout: post
 title:  "To Quote or Not To Quote? That is the question!"
 date:   2018-09-05 18:27:42 +0200
 categories: case-studies
-description: How to make your inspirational quotes better. 
+description: How to make my inspirational quotes better, with machine learning and AI 
 ---
 
 
@@ -118,7 +118,7 @@ According to the data most of the high scoring quotes are also longer by 4.2 wor
 Not quite. We need to know if the karma scores increase as you add more words and to do that we trained a small machine learning model. According to our model each word you add to your quote will increase your karma by just 0.45 points. So 10 words = 4.5 points right? Well yes in theory, but remember longer quotes impact readability. Which we'll explore next. 
 
 
-<h2>Readability</h2>
+<h2>The effects of readability</h2>
 
 What is readability? I hear you ask. Well simply put readability tells us how easy it is for the reader to understand the contents of the text. To keep things simple we'll use the [Dale-Chall readability score](https://en.wikipedia.org/wiki/Dale%E2%80%93Chall_readability_formula). Whats good about this formula is that it gives us a score corresponding to a US school grade. For example a score of 4 means that an average 4th grader can understand the text.
 
@@ -126,7 +126,7 @@ What is readability? I hear you ask. Well simply put readability tells us how ea
 
 Looking at the 2 graphs reveals that the top quotes have a slightly lower readability score (6.87 versus 7.04 for the bottom 95 %) making them easier to understand. This is also confirmed by our model which predicts that an increase of 1 level would result in a loss of 0.5 points of karma. Passionate writers be warned! Increasing the length of your quote might backfire on you if the text becomes too hard to understand.
 
-<h2>Sentiment</h2>
+<h2>The power of sentiment</h2>
 
 Should your quotes be filled with hope? Or dark and gloomy? That's what our sentiment analysis will determine. But how does sentiment work? Well to put it simple we split all words in 2 categories - positive and negative. Positive words are those associated with ... well positive feelings such as joy, kindness, inspiration and so on. Negative are all words associated with bad emotions - anger, sadness and loneliness. Then we give each quote a score between -1 and 1, where -1 means the quote is highly negative, 1 that its positive and 0 means neutral. So which feelings are most common in our data? Well lets take a look!
 

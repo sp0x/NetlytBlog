@@ -233,4 +233,4 @@ In our attempt to improve the stock market with AI we've managed to make things 
 
 *Wealth of all 10 bots after the end of simulation 5*
 
-To get the full code visit: ![](https://github.com/2087829p/wallstreet-ai/)
+To get the full code visit: https://github.com/2087829p/wallstreet-ai/

@@ -184,6 +184,7 @@ Finally lets take a look at the transfer function. This function helps the stock
 Now that everything is ready it's time to let our agents take over the stock exchange. For our tests we'll spawn 10 agents (5 buyers and 5 sellers). In the first experiment our buyers will have $1,000 each and our sellers will each have only 1 share. The starting price is at $782.75 and we give the agent the data for the previous 60 transactions so it can start learning. Remember this is a stock exchange and our bots represent investors who are trying to make enough money for retirement. So we want this market to go up!
 
 ![Stock Exchange Simulation with Default conditions](/assets/wallstreet/rl_run1.png)
+
 *Fig1. Stock market simulation with $1,000 accounts. Y-axis shows the price of the stock in thousands of dollars. X-axis represents time.*
 
 After the first simulation it looks like our market has crashed. Looks like no one will be retiring anytime soon. But how can this be? Shouldn't our agents be smart enough to find the fair price and trade happily ever after? 
@@ -191,28 +192,32 @@ After the first simulation it looks like our market has crashed. Looks like no o
 Well it looks like our agent has found a fair price which is slightly above 0. But why? The reason for this is that our trader agent gets punished if it doesn't make a profit. To make a profit the agent has to sell at a price higher than the purchase price. However our buyer agents start with only a few hundred dollars more than the open price. This makes their margins extremely low and they refuse to buy. So what can we do to fix this? We could give our bots an extra $1,000 in the form of credit this is similar to a margin account.
 
 ![Stock Exchange Simulation with 2x credit](/assets/wallstreet/rl_2xcredit_run1.png)
+
 *Fig2. Stock market simulation with margin accounts*
 
 Looks like our crashing problem has been solved! Our agents have found a new stable price at around $1,900. But why did the bots go into a shopping spree? The reason for this is that the margin account has made money worthless by minimizing losses. How? Simple when the agent runs out of money it doesn't get punished instead it takes a loan and can buy as much stock as it needs. The amount of shares on the other hand is still limited hence why shares become more valuable. In this situation the sellers are unwilling to sell their precious shares for worthless cash. So what will happen if we increased the amount of shares? Time for a stock split!
 
 ![Stock Exchange Simulation with 5x number of shares](/assets/wallstreet/rl_5xqty_run1.png)
+
 *Fig3. Stock market simulation with 5x the number of shares*
 
 Increasing the number of shares has made them worth less than the money that the agent has. But why hasn't this forced the market to crash like in our first experiment? To answer this question first need to see what will happen if we give our agents more money. Yes we're talking about quantitative easing! How will the market respond?
 
 ![Stock Exchange Simulation with 5x number of shares and 5x amount of credit](/assets/wallstreet/rl_5xall_run1.png)
+
 *Fig4. Stock market simulation with 5x the number of shares and 5x the amount of credit*
 
 Interesting after a few ups and downs it looks like we've finally entered a bull market. Prices are rising and our bots are becoming richer than ever! So all we needed to do is supply more money and stock? Not quite let's have a look at what happens to the market in the long run.
 
 ![Stock Exchange Simulation with 5x number of shares and credit in the long run](/assets/wallstreet/rl_5xall_run2_4k_iter.png)
+
 *Fig5. Long run stock market simulation with 5x the number of shares and 5x the amount of credit*
 
 The market has crashed yet again. However if you take a closer look you'd notice something very interesting. The market seems to have undergone a series of boom-bust cycles similar to our 3rd simulation. This time the price kept going up in the long run before suddenly crashing. So how can we explain this to our retirees who lost all of their money? How and why does this keep happening?
 
 ![Game Theory](/assets/wallstreet/game_theory.png)
 
-The explanation is rather simple and it comes from Game Theory (no not the YouTube channel ![this Game theory](https://en.wikipedia.org/wiki/Game_theory)). In game theory there's the notion of zero-sum games. A zero-sum game is a type of game in which in order for one player to win the other one must lose. I can already hear economists yelling "Trade is not a zero-sum game!". And they're right normal trade is not a zero-sum game, but day trade is. Why? Because our bots (and real world day traders for that matter) don't really want the stock. They're just buying it in order for them to sell it in the future at a higher price. The person/bot getting in on the stock last is the one that all previous traders profit off of. In order for the last trader to get his money back someone else needs to pay him an even higher price! This is contrary to regular trade where the buyer exchanges his money for something he wants. In a regular trade the consumed good rarely gets resold countless times at a higher price. The utility of a product comes from the product itself and its consumption. In day trade the utility comes from the reselling of the stock. So what does this all mean?
+The explanation is rather simple and it comes from Game Theory (no not the YouTube channel [this Game theory](https://en.wikipedia.org/wiki/Game_theory)). In game theory there's the notion of zero-sum games. A zero-sum game is a type of game in which in order for one player to win the other one must lose. I can already hear economists yelling "Trade is not a zero-sum game!". And they're right normal trade is not a zero-sum game, but day trade is. Why? Because our bots (and real world day traders for that matter) don't really want the stock. They're just buying it in order for them to sell it in the future at a higher price. The person/bot getting in on the stock last is the one that all previous traders profit off of. In order for the last trader to get his money back someone else needs to pay him an even higher price! This is contrary to regular trade where the buyer exchanges his money for something he wants. In a regular trade the consumed good rarely gets resold countless times at a higher price. The utility of a product comes from the product itself and its consumption. In day trade the utility comes from the reselling of the stock. So what does this all mean?
 
 ![Tug of war](/assets/wallstreet/competition.jpg)
 
@@ -233,4 +238,4 @@ In our attempt to improve the stock market with AI we've managed to make things 
 
 *Wealth of all 10 bots after the end of simulation 5*
 
-To get the full code visit: https://github.com/2087829p/wallstreet-ai/
+To get the full code visit: [https://github.com/2087829p/wallstreet-ai/](https://github.com/2087829p/wallstreet-ai/)

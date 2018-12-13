@@ -2,7 +2,7 @@
 layout: post
 title:  "What if we replaced Wall Street with AI?"
 date:   2018-12-06 18:27:42 +0200
-categories: case-studies
+categories: case-studies hidden
 description: What will happen if artificial intelligence replaces all stock brokers on Wall Street. Will the economy be more stable and fair? 
 ---
 

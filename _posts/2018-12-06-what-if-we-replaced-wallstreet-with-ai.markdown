@@ -217,7 +217,7 @@ The market has crashed yet again. However if you take a closer look you'd notice
 
 ![Game Theory](/assets/wallstreet/game_theory.png)
 
-The explanation is rather simple and it comes from Game Theory (no not the YouTube channel ![this Game theory](https://en.wikipedia.org/wiki/Game_theory) ). In game theory there's the notion of zero-sum games. A zero-sum game is a type of game in which in order for one player to win the other one must lose. I can already hear economists yelling "Trade is not a zero-sum game!". And they're right normal trade is not a zero-sum game, but day trade is. Why? Because our bots (and real world day traders for that matter) don't really want the stock. They're just buying it in order for them to sell it in the future at a higher price. The person/bot getting in on the stock last is the one that all previous traders profit off of. In order for the last trader to get his money back someone else needs to pay him an even higher price! This is contrary to regular trade where the buyer exchanges his money for something he wants. In a regular trade the consumed good rarely gets resold countless times at a higher price. The utility of a product comes from the product itself and its consumption. In day trade the utility comes from the reselling of the stock. So what does this all mean?
+The explanation is rather simple and it comes from Game Theory (no not the YouTube channel [this Game theory](https://en.wikipedia.org/wiki/Game_theory)). In game theory there's the notion of zero-sum games. A zero-sum game is a type of game in which in order for one player to win the other one must lose. I can already hear economists yelling "Trade is not a zero-sum game!". And they're right normal trade is not a zero-sum game, but day trade is. Why? Because our bots (and real world day traders for that matter) don't really want the stock. They're just buying it in order for them to sell it in the future at a higher price. The person/bot getting in on the stock last is the one that all previous traders profit off of. In order for the last trader to get his money back someone else needs to pay him an even higher price! This is contrary to regular trade where the buyer exchanges his money for something he wants. In a regular trade the consumed good rarely gets resold countless times at a higher price. The utility of a product comes from the product itself and its consumption. In day trade the utility comes from the reselling of the stock. So what does this all mean?
 
 ![Tug of war](/assets/wallstreet/competition.jpg)
 
@@ -238,4 +238,4 @@ In our attempt to improve the stock market with AI we've managed to make things 
 
 *Wealth of all 10 bots after the end of simulation 5*
 
-To get the full code visit: https://github.com/2087829p/wallstreet-ai/
+To get the full code visit: [https://github.com/2087829p/wallstreet-ai/](https://github.com/2087829p/wallstreet-ai/)

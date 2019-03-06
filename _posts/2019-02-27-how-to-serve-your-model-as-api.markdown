@@ -2,13 +2,18 @@
 layout: post
 title:  "How to serve your ML model as an API"
 date:   2019-02-27 13:16:42  +0200
-categories: case-studies hidden
+categories: case-studies
 description: How to use Flask with your machine learning model in order to turn it into a lightweight API. 
 ---
 
 # Creating an API for your NLP model.
 
-In this post you'll learn how to create a simple API from a machine learning model, using Python and Flask
+We @Netlyt have noticed that there's a barrier between some businesses and the power of machine learning, so we're trying to help everybody by making it really easy to get actionable insight and predictions from your data.
+
+Netlyt specializes in solving complex AI problems. Ranging from energy problems in Africa to predicting air pollution in Europe, our efforts are focused on solving real-world problems and providing prototypes in a matter of weeks.  
+[Contact us now](https://netlyt.io/#contact)  
+
+**In this post you'll learn how to create a simple API from a machine learning model, using Python and Flask**
 
 Assuming that you've built a nice machine learning model, that could recognize the language of any text.
 How can you or anybody else use your model from other languages, like Java for example?
@@ -56,9 +61,10 @@ if __name__ == '__main__':
 ```
 
 Run it with
-```
+```python
 python app.py
 ```
+
 Let's go over the content of app.py.  
 - We created an instance of the Flask class, passing the name variable which would be `main`
 - `@app.route("/")` is a decorator, that tells Flask that it should call the `index` function, whenever the `/` route is required.
@@ -217,3 +223,4 @@ There are some additional steps that might improve your API:
 
 In the next post, we'll cover [How to turn your model into a microservice](#) so it's easy to deploy and scale. 
 To see the full code for this post, [check out this repository](https://github.com/sp0x/flask_langdetect).
+

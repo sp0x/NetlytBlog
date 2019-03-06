@@ -2,7 +2,7 @@
 layout: post
 title:  "How to serve your ML model as an API"
 date:   2019-02-27 13:16:42  +0200
-categories: case-studies
+categories: how-to
 description: How to use Flask with your machine learning model in order to turn it into a lightweight API. 
 ---
 

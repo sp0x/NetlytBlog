@@ -4,8 +4,8 @@ title:  "To Quote or Not To Quote? That is the question!"
 date:   2018-09-05 18:27:42 +0200
 categories: case-studies
 description: How to make my inspirational quotes better, with machine learning and AI 
+cover: "/assets/img/think_diff.jpg"
 ---
-
 
 As everyone who uses social media you've probably noticed the rise of inspirational quotes. Be it posts on a sunny background from a friend you rarely hear from. A wise piece of thought supposedly with a picture of Einstein himself! We've all seen them.
 Most of the time they annoy us, but on rare occasions just the right quote appears and we feel compelled to share it. This is normal behavior on social media. You see something you like you share it to gain a little bit of fame from finding that one thing no one else knew about. But have you ever thought of what makes a quote good? Why do people like one quote over the other?

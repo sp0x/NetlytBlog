@@ -1,0 +1,10 @@
+.post-cover{
+    width: 120px;
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+}
+
+.post-item>div{
+    display: inline-block;
+}

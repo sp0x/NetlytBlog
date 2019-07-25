@@ -39,3 +39,13 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Handling Reading
+safe : false
+include : [".htaccess", "_pages", "_made"]
+exclude: ["README.md", "node_modules/", ".sass-cache/", "Gemfile", "Gemfile.lock", ".git/", "Gruntfile.js", "package.json"]
+
+collections:
+  pages:
+    output : true
+    permalink: /:collection/:path

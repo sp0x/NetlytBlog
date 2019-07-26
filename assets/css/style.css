@@ -8,3 +8,25 @@
 .post-item>div{
     display: inline-block;
 }
+.related-post{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 240px;
+    vertical-align: top;
+}
+.related-post h4{
+    text-align: left;
+}
+.related-post-cover{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    background-position: center;
+    background-size: cover;
+}
+.cover-link{
+    width: 100%;
+    height: 100%;
+    display: block;
+}

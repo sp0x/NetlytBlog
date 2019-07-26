@@ -21,8 +21,13 @@
 {% endfor %}
 
 
-<div>
-    <h5><a href="{{ site.baseurl }}{{ pg.url }}">{{ pg.title }}{{ commonTags }}</a></h5>
+<div class="related-post">
+    <div class="related-post-cover" style="background-image: url('{{ pg.cover }}')">
+        <a href="{{ pg.url }}" class="cover-link"></a>
+    </div>
+    <div>
+        <h4><a href="{{ site.baseurl }}{{ pg.url }}">{{ pg.title }}{{ commonTags }}</a></h4>
+    </div>
 </div>
 
 {% endfor %}

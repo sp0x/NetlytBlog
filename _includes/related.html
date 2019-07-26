@@ -20,14 +20,9 @@
 {% endif %}
 {% endfor %}
 
-{% if sameTagCount >= minCommonTags %}
+
 <div>
     <h5><a href="{{ site.baseurl }}{{ pg.url }}">{{ pg.title }}{{ commonTags }}</a></h5>
 </div>
-{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-{% if maxRelatedCounter >= maxRelated %}
-{% break %}
-{% endif %}
-{% endif %}
 
 {% endfor %}

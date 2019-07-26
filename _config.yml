@@ -28,6 +28,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
+#  - jekyll-related-posts
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -40,7 +41,6 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-gems: ['jekyll-related-posts']
 
 # Handling Reading
 safe : false

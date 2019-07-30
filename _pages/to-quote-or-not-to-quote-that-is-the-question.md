@@ -46,7 +46,7 @@ Where as the activity chart for the high performers shows that they were release
 
 Common sense would suggest that the if a smart person says something then it must be true or at least not wrong. After all if a person is smarter or more famous than us then they probably know more about the world than we do. So it would make sense for us to look for good quotes from famous people. But will they're fame help us gain more likes?
 
-<table>
+<table class="table table-compact table-bordered table-sm">
   <tr>
   <th>Quote</th>
   <th>Author</th>

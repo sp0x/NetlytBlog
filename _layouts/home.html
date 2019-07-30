@@ -1,15 +1,350 @@
 ---
 layout: default
 ---
-<link rel="stylesheet"  href="/assets/css/style.css"/>
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-  {{ content }}
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+{%- if page.title -%}
+<h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+{{ content }}
 
+<div class="site-section py-0">
+    <div class="owl-carousel hero-slide owl-style">
+        {%- if site.pages.size > 0 -%}
+        {% for page in site.pages limit:1 %}
+            <div class="site-section">
+            <div class="container">
+                <div class="half-post-entry d-block d-lg-flex bg-light">
+                    <div class="img-bg" style="background-image: url('{{ page.cover }}')"></div>
+                    <div class="contents">
+                        <span class="caption">Latest</span>
+                        <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+                        <p class="mb-3">{{ page.description | escape }}</p>
+
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">{{ page.author }}</a> in <a href="#">{{ page.category }}</a></span>
+                            <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {%- endif -%}
+
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Editor's Pick</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="post-entry-1">
+                            {%- if site.pages.size > 0 -%}
+                            {% for page in site.pages limit:1 %}
+
+                            <a href="{{ page.url | relative_url }}"><img src="{{ page.cover }}" alt="Image" class="img-fluid"></a>
+                            <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+                            <p>{{ page.description | escape }}</p>
+                            <div class="post-meta">
+                                <span class="d-block"><a href="#">{{page.author}}</a> in <a href="#">{{page.category}}</a></span>
+                                <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                            </div>
+
+                            {% endfor %}
+                            {%- endif -%}
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        {%- if site.pages.size > 1 -%}
+                        {% for page in site.pages offset:1 %}
+                            <div class="post-entry-2 d-flex">
+                                <div class="thumbnail" style="background-image: url('{{ page.cover }}')"></div>
+                                <div class="contents">
+                                    <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+                                    <div class="post-meta">
+                                        <span class="d-block"><a href="#">{{page.author}}</a> in <a href="#">{{page.category}}</a></span>
+                                        <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="section-title">
+                    <h2>Trending</h2>
+                </div>
+
+                {%- if site.pages.size > 0 -%}
+                {% assign counter = 1 %}
+                {% for page in site.pages %}
+                <div class="trend-entry d-flex">
+                    <div class="number align-self-start">{{counter}}</div>
+                    <div class="trend-contents">
+                        <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">{{page.author}}</a> in <a href="#">{{page.category}}</a></span>
+                            <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+                {% assign counter=counter | plus:1 %}
+                {% endfor %}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="py-0">
+    <div class="container">
+        <div class="half-post-entry d-block d-lg-flex bg-light">
+            <div class="img-bg" style="background-image: url('images/big_img_1.jpg')"></div>
+            <div class="contents">
+                <span class="caption">Editor's Pick</span>
+                <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate vero obcaecati natus adipisci necessitatibus eius, enim vel sit ad reiciendis. Enim praesentium magni delectus cum, tempore deserunt aliquid quaerat culpa nemo veritatis, iste adipisci excepturi consectetur doloribus aliquam accusantium beatae?</p>
+
+                <div class="post-meta">
+                    <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">Food</a></span>
+                    <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title">
+                    <h2>Politics</h2>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail" style="background-image: url('images/img_v_1.jpg')"></div>
+                    <div class="contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail" style="background-image: url('images/img_v_2.jpg')"></div>
+                    <div class="contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail" style="background-image: url('images/img_v_3.jpg')"></div>
+                    <div class="contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="section-title">
+                    <h2>Business</h2>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail" style="background-image: url('images/img_v_1.jpg')"></div>
+                    <div class="contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail" style="background-image: url('images/img_v_2.jpg')"></div>
+                    <div class="contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail" style="background-image: url('images/img_v_3.jpg')"></div>
+                    <div class="contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="section-title">
+                    <h2>Recent News</h2>
+                </div>
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail order-md-2" style="background-image: url('images/img_h_4.jpg')"></div>
+                    <div class="contents order-md-1 pl-0">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail order-md-2" style="background-image: url('images/img_h_3.jpg')"></div>
+                    <div class="contents order-md-1 pl-0">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-entry-2 d-flex">
+                    <div class="thumbnail order-md-2" style="background-image: url('images/img_h_3.jpg')"></div>
+                    <div class="contents order-md-1 pl-0">
+                        <span class="caption mb-4 d-block">Editor's Pick</span>
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi temporibus praesentium neque, voluptatum quam quibusdam.</p>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="section-title">
+                    <h2>Popular Posts</h2>
+                </div>
+
+                <div class="trend-entry d-flex">
+                    <div class="number align-self-start">01</div>
+                    <div class="trend-contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-entry d-flex">
+                    <div class="number align-self-start">02</div>
+                    <div class="trend-contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-entry d-flex">
+                    <div class="number align-self-start">03</div>
+                    <div class="trend-contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trend-entry d-flex pl-0">
+                    <div class="number align-self-start">04</div>
+                    <div class="trend-contents">
+                        <h2><a href="blog-single.html">News Needs to Meet Its Audiences Where They Are</a></h2>
+                        <div class="post-meta">
+                            <span class="d-block"><a href="#">Dave Rogers</a> in <a href="#">News</a></span>
+                            <span class="date-read">Jun 14 <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                    <a href="#" class="more">See All Popular <span class="icon-keyboard_arrow_right"></span></a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <ul class="custom-pagination list-unstyled">
+                    <li><a href="#">1</a></li>
+                    <li class="active">2</li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section subscribe bg-light">
+    <div class="container">
+        <form action="#" class="row align-items-center">
+            <div class="col-md-5 mr-auto">
+                <h2>Newsletter Subcribe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur obcaecati possimus nisi ea iste!</p>
+            </div>
+            <div class="col-md-6 ml-auto">
+                <div class="d-flex">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-secondary" ><span class="icon-paper-plane"></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="home">
   {%- if site.pages.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
         {%- for page in site.pages -%}
 
@@ -18,8 +353,6 @@ layout: default
                 <div class="post-cover" style="background-image: url('{{ page.cover }}')"></div>
             </div>
             <div>
-                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-
                 <h3>
                     <a class="post-link" href="{{ page.url | relative_url }}">
                         {{ page.title | escape }}
@@ -37,34 +370,5 @@ layout: default
     <p class="feed-subscribe"><svg class="svg-icon orange"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p>
   {%- endif -%}
 
-  {%- if site.posts.size > 0 -%}
-    {% assign posts = site.posts %}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in posts -%}
-      {%- unless post.categories contains "hidden" -%}
-        <li>
-            <div>
-                <div class="post-cover" style="background-image: url('{{ post.cover }}')"></div>
-            </div>
-            <div>
-                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                <span class="post-meta">{{ post.date | date: date_format }}</span>
-                <h3>
-                    <a class="post-link" href="{{ post.url | relative_url }}">
-                        {{ post.title | escape }}
-                    </a>
-                </h3>
-                {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
-                {%- endif -%}
-            </div>
-        </li>
-      {%- endunless -%}
-      {%- endfor -%}
-    </ul>
-
-    <p class="feed-subscribe"><svg class="svg-icon orange"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p>
-  {%- endif -%}
 
 </div>

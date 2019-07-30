@@ -11,10 +11,13 @@ layout: default
     <div class="owl-carousel hero-slide owl-style">
         {%- if site.pages.size > 0 -%}
         {% for page in site.pages limit:1 %}
-            <div class="site-section">
+        <div class="site-section">
             <div class="container">
                 <div class="half-post-entry d-block d-lg-flex bg-light">
-                    <div class="img-bg" style="background-image: url('{{ page.cover }}')"></div>
+                    <div class="img-bg" style="background-image: url('{{ page.cover }}')">
+                        <a class="coverlink" href="{{ page.url | relative_url }}">
+                        </a>
+                    </div>
                     <div class="contents">
                         <span class="caption">Latest</span>
                         <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
@@ -38,7 +41,7 @@ layout: default
 <div class="site-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
@@ -47,12 +50,37 @@ layout: default
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="post-entry-1">
-                            {%- if site.pages.size > 0 -%}
-                            {% for page in site.pages limit:1 %}
+                    {%- if site.pages.size > 0 -%}
+                    {% for page in site.pages offset:1 %}
+                        {% assign remainder = forloop.index | modulo: 4 %}
+                        {% if remainder == 0 %}
+                    <div class="site-section w-100">
+                        <div class="container">
+                            <div class="half-post-entry d-block d-lg-flex bg-light">
+                                <div class="img-bg" style="background-image: url('{{ page.cover }}')">
+                                    <a class="coverlink" href="{{ page.url | relative_url }}">
+                                    </a>
+                                </div>
+                                <div class="contents">
+                                    <span class="caption">Latest</span>
+                                    <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
+                                    <p class="mb-3">{{ page.description | escape }}</p>
 
-                            <a href="{{ page.url | relative_url }}"><img src="{{ page.cover }}" alt="Image" class="img-fluid"></a>
+                                    <div class="post-meta">
+                                        <span class="d-block"><a href="#">{{ page.author }}</a> in <a href="#">{{ page.category }}</a></span>
+                                        <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        {% else %}
+                    <div class="col-md-4">
+                        <div class="post-entry-1">
+
+
+                            <a href="{{ page.url | relative_url }}"><img src="{{ page.cover }}" alt="Image" class="img-fluid post-img-2"></a>
                             <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
                             <p>{{ page.description | escape }}</p>
                             <div class="post-meta">
@@ -60,51 +88,16 @@ layout: default
                                 <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
                             </div>
 
-                            {% endfor %}
-                            {%- endif -%}
+
                         </div>
                     </div>
-
-                    <div class="col-md-6">
-                        {%- if site.pages.size > 1 -%}
-                        {% for page in site.pages offset:1 %}
-                            <div class="post-entry-2 d-flex">
-                                <div class="thumbnail" style="background-image: url('{{ page.cover }}')"></div>
-                                <div class="contents">
-                                    <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
-                                    <div class="post-meta">
-                                        <span class="d-block"><a href="#">{{page.author}}</a> in <a href="#">{{page.category}}</a></span>
-                                        <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        {% endfor %}
                         {% endif %}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="section-title">
-                    <h2>Trending</h2>
-                </div>
 
-                {%- if site.pages.size > 0 -%}
-                {% assign counter = 1 %}
-                {% for page in site.pages %}
-                <div class="trend-entry d-flex">
-                    <div class="number align-self-start">{{counter}}</div>
-                    <div class="trend-contents">
-                        <h2><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h2>
-                        <div class="post-meta">
-                            <span class="d-block"><a href="#">{{page.author}}</a> in <a href="#">{{page.category}}</a></span>
-                            <span class="date-read">{{ page.date | date: date_format }} <span class="mx-1">&bullet;</span> 3 min read <span class="icon-star2"></span></span>
-                        </div>
-                    </div>
-                </div>
-                {% assign counter=counter | plus:1 %}
-                {% endfor %}
-                {% endif %}
+                    {% endfor %}
+                    {%- endif -%}
 
+
+                </div>
             </div>
         </div>
     </div>

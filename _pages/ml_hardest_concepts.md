@@ -2,8 +2,8 @@
 layout: post
 title:  "What are the hardest concepts to grasp in machine learning?"
 date:   2019-08-19 18:27:42 +0200
-categories: nlp
-category: NLP
+categories: ML Theory, ML
+category: ML Theory
 description: Whats the hardest thing in ML to wrap your head around?
 cover: "/assets/concept.jpg"
 author: Tony Petrov

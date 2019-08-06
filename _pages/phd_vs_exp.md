@@ -2,8 +2,8 @@
 layout: post
 title:  "What is the difference between a Ph.D. Data scientist and a data scientist who has been practicing for 10 years without the degree?"
 date:   2019-08-19 18:27:42 +0200
-categories: nlp
-category: NLP
+categories: ML, ML for PMs
+category: ML for PMs
 description: Should I hire someone with a Ph.D or experience for my data science team?
 cover: "/assets/phd_vs_exp.jpg"
 author: Tony Petrov

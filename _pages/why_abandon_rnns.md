@@ -5,7 +5,7 @@ date:   2019-08-19 18:27:42 +0200
 categories: nlp
 category: NLP
 description: Why are AI researchers running away from RNNs?
-cover: "/assets/rnns.png"
+cover: "/assets/rnn.png"
 author: Tony Petrov
 ---
 <i>[As answered on Quora: Why are Natural Language Processing (NLP) researchers trying to abandon RNNs and design new architectures that are not recurrent?](https://qr.ae/TWvDyP)</i>

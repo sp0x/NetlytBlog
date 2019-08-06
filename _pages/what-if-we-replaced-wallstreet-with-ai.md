@@ -6,7 +6,7 @@ categories: case-studies
 category: Case Studies
 description: What will happen if artificial intelligence replaces all stock brokers on Wall Street. Will the economy be more stable and fair?
 cover: "/assets/wallstreet/stockmarket.jpg"
-author: Tony 
+author: Tony Petrov
 ---
 
 ![Stock market](/assets/wallstreet/stockmarket.jpg)

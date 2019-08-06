@@ -6,7 +6,7 @@ categories: case-studies
 category: Case Studies
 description: How to make my inspirational quotes better, with machine learning and AI 
 cover: "/assets/img/think_diff.jpg"
-author: Tony
+author: Tony Petrov
 ---
 
 As everyone who uses social media you've probably noticed the rise of inspirational quotes. Be it posts on a sunny background from a friend you rarely hear from. A wise piece of thought supposedly with a picture of Einstein himself! We've all seen them.

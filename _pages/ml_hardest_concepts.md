@@ -36,4 +36,7 @@ In ML good data can give you decent results even if you’re using an average al
 
 The way I got around to grasping these concepts was through lots of practice. So to all beginners, I’d say don’t let ML scare you and keep on experimenting until you’ve mastered it.
 
-<i>Netlyt is an AI-only research and development company. We tackle non-trivial problems using the latest technologies and our own solutions. We've built systems to <a href=netlyt.io><b>prevent corruption in the police force, track and predict air pollution, reduce natural gas distribution costs, detect faults in the electricity grids in Africa</b></a> and others.</i>
+
+<em style="font-size: 21px; margin-top: 2em; color: rgba(0, 0, 0, 0.84);">
+    <i>Netlyt is an AI-only research and development company. We tackle non-trivial problems using the latest technologies and our own solutions. We've built systems to <b>[prevent corruption in the police force, track and predict air pollution, reduce natural gas distribution costs, detect faults in the electricity grids in Africa](https://netlyt.io)</b> and others.</i>
+</em>

@@ -34,3 +34,5 @@ For one RNNs are more intuitive and easy to understand. When you’re trying to 
 The early stages of the development of a new algorithm are very difficult. First you have to understand the problem before you start optimizing your solution. RNNs are a great start for any sequence based problem. They allow you to quickly experiment and start learning about the problem in more depth.
 
 Once you have a working RNN based solution that you understand then you can move onto using CNNs.  
+
+Netlyt is an AI-only research and development company. We tackle non-trivial problems using the latest technologies and our own solutions. We've built systems to <a href=netlyt.io><b>prevent corruption in the police force, track and predict air pollution, reduce natural gas distribution costs, detect faults in the electricity grids in Africa</b></a> and others.

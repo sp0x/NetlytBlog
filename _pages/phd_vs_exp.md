@@ -28,3 +28,5 @@ Let’s not mention the proclivity of Ph.Ds to waste all the resources at their 
 <h2>Should I get an experienced practitioner or a Ph.D data scientist for my team?</h2>
 
 If you’re trying to build a cutting edge algorithm then PhDs are your people in most cases. For a well-balanced team, you need both. Practitioners can help you find and implement the solution to your problem while people with PhDs can provide more theoretical insights and help you improve your solution to surpass your competition in the long run.
+
+Netlyt is an AI-only research and development company. We tackle non-trivial problems using the latest technologies and our own solutions. We've built systems to <a href=netlyt.io><b>prevent corruption in the police force, track and predict air pollution, reduce natural gas distribution costs, detect faults in the electricity grids in Africa</b></a> and others.

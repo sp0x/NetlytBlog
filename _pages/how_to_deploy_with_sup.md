@@ -63,7 +63,9 @@ Host <ssh host>
 ```
 Make sure you replace the **user**, **ssh host** and **path to id_rsa** variables.  
 For the *user* value use the username that you specified in your ssh key.  
-Exit by hitting **ctrl + x**  
+Exit by hitting **ctrl + x**    
+If you end up with windows styled line endings (CRLF) you can install dos2unix(`sudo apt-get install dos2unix`) and run `dos2unix config` while you're in the .ssh directory.  
+The dos2unix utility will convert CRLF line endings to linux/mac LF line endings.  
 With this configuration you can easily access the ssh host without entering any password, assuming you did not use a password when you created your keypair.
 Test it out by running `ssh <ssh host>`.  
 You should be able to login without any password.

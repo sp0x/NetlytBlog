@@ -1314,3 +1314,12 @@ h1, h2, h3, h4, h5,
   height: 235px;
   background-color: #f8f9fa!important;
 }
+div.highlight{
+  max-height: 400px;
+  overflow: scroll;
+
+  pre.highlight{
+    overflow: hidden;
+    display: inline-block;
+  }
+}

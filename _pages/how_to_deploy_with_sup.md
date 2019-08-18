@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How can I deploy with Sup?"
+title:  "Deploying with a single command"
 date:   2019-08-17 01:01:01 +0200
 categories: DevOps
 category: DevOps

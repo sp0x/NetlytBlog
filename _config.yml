@@ -46,6 +46,9 @@ plugins:
 safe : false
 include : [".htaccess", "_pages", "_made"]
 exclude: ["README.md", "node_modules/", ".sass-cache/", "Gemfile", "Gemfile.lock", ".git/", "Gruntfile.js", "package.json"]
+sass:
+  sass_dir: _sass
+  style: compressed
 
 collections:
   pages:

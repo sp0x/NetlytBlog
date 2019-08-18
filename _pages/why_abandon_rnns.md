@@ -8,6 +8,7 @@ description: Why are AI researchers running away from RNNs?
 cover: "/assets/rnn.png"
 author: Tony Petrov
 ---
+
 <i>[As answered on Quora: Why are Natural Language Processing (NLP) researchers trying to abandon RNNs and design new architectures that are not recurrent?](https://qr.ae/TWvDyP)</i>
 
 For quite some time now new CNN based models have been pushing RNNs out of use. Here are a few reasons why this is happening:

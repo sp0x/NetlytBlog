@@ -208,16 +208,27 @@ Commands:
 - tail-logs     Tail Docker logs
 - health        Application health check
 - lf            Corrects your line endings
+- perms         Sets the permissions to the current user and a specific group
 - slack-notify  Notify Slack about new deployment
 ```
 A useful command is `bash` which opens an interactive bash shell to your host or `tail-logs` which starts tailing the logs for our `app` service that we defined in docker-compose.
+Note that the beginning of the Supfile.yml file has an `env` section.  
+The variables in that section are used in the deployment.  
+If you have a team that'll also be working on the project, it's useful to set the $GROUP variable, then any member of that group on your instance can deploy.
+
 
 To deploy our API we'll be using the `deploy` target.  
-It firstly creates the directory in which our project is stored on the remote host.  
-Then it uploads the contents of our directory, converts CRLF to LF files, and executes "./scripts/docker-build.sh".  
+The target executes these actions:
+- It creates the directory in which our project is stored on the remote host.    
+- Then it uploads the contents of our directory  
+- Converts CRLF to LF files  
+- Fixes permissions so that you could use a user group for your project  
+- Executes "./scripts/docker-build.sh".  
+- Finally it UPs the `app` service.  
+  
 Something that you should note is that all your `.sh,Supfile.yml,Dockefile,docker-compose.yml` files **should be with LF line endings.**
 If you're unsure you can always run `sup prod lf`, which should convert all files in a LF format.
-Finally it UPs the `app` service.
+
 
 To deploy the API, run `sup prod deploy`.
 After this completes, you should be able to see the message "Hello world" when you open your <ssh host>:8089/ url
